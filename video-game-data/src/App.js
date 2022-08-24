@@ -1,22 +1,17 @@
-
-import ApiData from "./Components/APIData/APIData";
-import GameData from "./Components/GameData/GameData";
+import DataGraph from "./Components/DataGraph/DataGraph";
 import GameDetails from "./Components/GameDetails/GameDetails";
+import SearchBar from "./Components/SearchBar/SearchBar";
+import YearGraph from "./Components/YearGraph/YearGraph";
 
 
 function App() {
   return (
     <div>
       <h3>Video Game Data</h3>
-      <div>
-        <ApiData/>
-      </div>
-      <div>
-      <GameDetails/>  
-      </div>
-      <div>
-      <GameData/> 
-      </div>
+      <DataGraph/>
+      <SearchBar/>
+      <GameDetails/>
+      <YearGraph/>  
     </div>
   );
 }

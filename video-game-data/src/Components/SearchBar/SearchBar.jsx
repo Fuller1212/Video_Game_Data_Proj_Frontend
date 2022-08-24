@@ -1,19 +1,21 @@
-// import axios from "axios";
+import { useState } from "react";
 
-const GameDetails = () => {
+const SearchBar = (props) => {
 
-    // let response = await axios.get()
+    const[search, setSearch] = useState('')
 
+    function handleSearch (event){
+        event.preventDefault();
+    };
     return ( 
         <div>
             <form >
             <p>Search for game</p>    
             <input className ='search-bar' type="text" placeholder="search..."/>
             <button className='search-button' type="submit">Search</button>
-
             </form>
         </div>
      );
 }
  
-export default GameDetails;
+export default SearchBar;

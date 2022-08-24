@@ -1,5 +1,8 @@
 import { Chart } from "react-google-charts";
-const ApiData = () => {
+const DataGraph = () => {
+
+  // let response = await axios.get(`http://localhost:8080/all`);
+
 
      const data = [
          ["Platform","Global Sales"],
@@ -19,6 +22,7 @@ const ApiData = () => {
        const options = {
         chart: {
           title: "Platform By Global Sales in Millions",
+          subtitle: "Since 2013",
         },
       }; 
       
@@ -36,4 +40,4 @@ const ApiData = () => {
      );
 }
  
-export default ApiData;
+export default DataGraph;
