@@ -1,6 +1,7 @@
-import Chart from "react-google-charts";
-import Api_Data from "./Components/API_Data/API_Data";
-import Game_Data from "./Components/Game_Data/Game_Data";
+
+import ApiData from "./Components/APIData/APIData";
+import GameData from "./Components/GameData/GameData";
+import GameDetails from "./Components/GameDetails/GameDetails";
 
 
 function App() {
@@ -8,8 +9,13 @@ function App() {
     <div>
       <h3>Video Game Data</h3>
       <div>
-        <Api_Data/>
-        <Game_Data/>
+        <ApiData/>
+      </div>
+      <div>
+      <GameDetails/>  
+      </div>
+      <div>
+      <GameData/> 
       </div>
     </div>
   );

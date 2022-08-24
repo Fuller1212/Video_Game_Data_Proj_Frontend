@@ -1,5 +1,5 @@
 import { Chart } from "react-google-charts";
-const Api_Data = () => {
+const ApiData = () => {
 
      const data = [
          ["Platform","Global Sales"],
@@ -36,4 +36,4 @@ const Api_Data = () => {
      );
 }
  
-export default Api_Data;
+export default ApiData;

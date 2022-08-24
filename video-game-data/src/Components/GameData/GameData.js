@@ -1,8 +1,9 @@
 import { Chart } from "react-google-charts";
 
-const Game_Data = () => {
+const GameData = () => {
 
     const data = [
+        ["Console", "Sales"],
         ["PS3", 1],
         ["X360", 1],
         ["PS4", 1],
@@ -23,7 +24,7 @@ const Game_Data = () => {
 
 
     return ( 
-        <Chart
+    <Chart
       chartType="PieChart"
       data={data}
       options={options}
@@ -33,4 +34,4 @@ const Game_Data = () => {
      );
 }
  
-export default Game_Data;
+export default GameData;
