@@ -1,21 +1,31 @@
 import { Chart } from "react-google-charts";
 
-const YearGraph = () => {
+const YearGraph = ({videoGames}) => {
+
+
+  function generatedYearGraph(){
+    let filteredYears = videoGames.filter(game=>game.year >= 2010);
+
+    let filteredSportsGames = filteredYears.filter(game=>game.genre.includes('Sports'));
+
+    
+    let sportsGames = filteredSportsGames.map(game =>{
+      return [game.name, game.northamericasales]
+    })
+
+
+  }
 
     const data = [
         ["Year", "Global Sales"],
-        ["2001", 11],
-        ["2002", 2],
-        ["2003", 4],
-        ["2004", 3],
-        ["2005", 7],
+        
       ]; 
       const options = {
-        title: "Top 5 Global Sale Years",
+        title: "Best Sports Game Sellers Since 2010 in North America",
       };
     return ( 
     <Chart
-      chartType="PieChart"
+      chartType="Bar"
       data={data}
       options={options}
       width={"100%"}

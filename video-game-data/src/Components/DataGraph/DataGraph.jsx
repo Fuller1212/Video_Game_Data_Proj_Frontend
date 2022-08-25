@@ -28,6 +28,7 @@ const DataGraph = ({videoGames}) => {
         });
       
       console.log(allGamesForPlatform)
+      console.log(sum)
       
       return [platform, sum];
     });

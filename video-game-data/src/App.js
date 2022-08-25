@@ -29,9 +29,9 @@ function App() {
     <div>
       <h3>Video Game Data</h3>
       <DataGraph videoGames = {videoGames}/>
-      <SearchBar/>
+      <SearchBar videoGames = {videoGames}/>
       <GameDetails/>
-      <YearGraph/>  
+      <YearGraph videoGames ={videoGames}/>  
     </div>
   );
 }
