@@ -2,12 +2,26 @@ import { Chart } from "react-google-charts";
 const DataGraph = ({videoGames}) => {
 
   const options = {
-    chart: {
-      title: "Platform By Global Sales in Millions",
-      subtitle: "Since 2013",
-    },
+    title: "Best Sports Game Sellers in North America",
+      subtitle: "Since 2010",
+      backgroundColor: 'white',
+      colors: ["#EE3C3C"],
+      
     
-  }; 
+    hAxis: {
+      title: "Global Sales",
+      minValue: 0,
+    },
+    vAxis: {
+      title: "Platform",
+    },
+    bars: "horizontal",
+    axes: {
+      y: {
+        0: { side: "right" },
+      },
+    },
+  };
 
   
   function generateDataGraph(){
@@ -45,7 +59,7 @@ const DataGraph = ({videoGames}) => {
     return ( 
     <div>
         <Chart
-        chartType="Bar"
+        chartType="BarChart"
         width="100%"
         height="400px"
         data={generateDataGraph()}

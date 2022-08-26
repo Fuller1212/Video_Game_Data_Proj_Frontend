@@ -21,8 +21,6 @@ const SearchBar = ({videoGames}) => {
 
     return ( 
         <div>
-            
-            
             <input className ='search-bar' type="text" placeholder="search for game..."
             value={search} onChange ={(event)=> setSearch(event.target.value)}/>
             <button className='search-button'onClick={handleSearch}>Search</button>

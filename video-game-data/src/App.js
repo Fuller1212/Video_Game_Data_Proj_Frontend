@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import DataGraph from "./Components/DataGraph/DataGraph";
-import GameDetails from "./Components/GameDetails/GameDetails";
 import SearchBar from "./Components/SearchBar/SearchBar";
 import YearGraph from "./Components/YearGraph/YearGraph";
 
@@ -16,7 +15,6 @@ function App() {
   async function getVideoGames(){
     try{
       const response = await axios.get(`http://localhost:8080/all`);
-      debugger
       console.log(response.data);
       setVideoGames(response.data);
     }catch(ex){
@@ -30,7 +28,6 @@ function App() {
       <h3>Video Game Data</h3>
       <DataGraph videoGames = {videoGames}/>
       <SearchBar videoGames = {videoGames}/>
-      <GameDetails/>
       <YearGraph videoGames ={videoGames}/>  
     </div>
   );
