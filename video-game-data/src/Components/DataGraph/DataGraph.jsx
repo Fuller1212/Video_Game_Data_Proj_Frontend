@@ -1,10 +1,11 @@
 import { Chart } from "react-google-charts";
+import './DataGraph.css'
+
 const DataGraph = ({videoGames}) => {
 
   const options = {
-    title: "Best Sports Game Sellers in North America",
-      subtitle: "Since 2010",
-      backgroundColor: 'white',
+    title: "Best Console To Invest In Since 2013",
+      backgroundColor: 'whitesmoke',
       colors: ["#EE3C3C"],
       
     
@@ -57,7 +58,7 @@ const DataGraph = ({videoGames}) => {
       
 
     return ( 
-    <div>
+    <div className="graph">
         <Chart
         chartType="BarChart"
         width="100%"

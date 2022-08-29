@@ -28,8 +28,8 @@ function App() {
     <div>
       <Header/>
       <DataGraph videoGames = {videoGames}/>
-      <SearchBar videoGames = {videoGames}/>
-      <YearGraph videoGames ={videoGames}/>  
+      <SearchBar  videoGames = {videoGames}/>
+      <YearGraph videoGames ={videoGames}/> 
     </div>
   );
 }

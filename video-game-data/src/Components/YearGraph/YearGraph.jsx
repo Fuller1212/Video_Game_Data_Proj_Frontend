@@ -1,4 +1,5 @@
 import { Chart } from "react-google-charts";
+import './YearGraph.css'
 
 const YearGraph = ({videoGames}) => {
 
@@ -48,6 +49,7 @@ const YearGraph = ({videoGames}) => {
       return data;
   } 
     return ( 
+    <div className="graph"> 
     <Chart
       chartType="BarChart"
       data={generatedYearGraph()}
@@ -55,6 +57,7 @@ const YearGraph = ({videoGames}) => {
       width={"100%"}
       height={"400px"}
     />
+    </div> 
      );
 }
  
