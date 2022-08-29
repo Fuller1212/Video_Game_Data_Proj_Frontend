@@ -4,8 +4,7 @@ const YearGraph = ({videoGames}) => {
 
   const options = {
     
-      title: "Best Sports Game Sellers in North America",
-      subtitle: "Since 2010",
+      title: "Top 10 Sport Games in Last 10 Years",
       backgroundColor: 'beige',
       colors: ["#0AB1F1"],
       
@@ -26,11 +25,11 @@ const YearGraph = ({videoGames}) => {
   };
   
   function generatedYearGraph(){
-    let filteredYears = videoGames.filter(game=>game.year >= 2010);
+    let filteredYears = videoGames.filter(game=>game.year >= 2008);
 
     let filteredSportsGames = filteredYears.filter(game=>game.genre.includes('Sports'));
 
-    let topFilteredGames = filteredSportsGames.filter(game => game.northamericasales >=2.12)
+    let topFilteredGames = filteredSportsGames.filter(game => game.northamericasales >=2.34)
     console.log(topFilteredGames)
 
     let sportsGames = topFilteredGames.map(game =>{

@@ -3,6 +3,7 @@ import axios from 'axios';
 import DataGraph from "./Components/DataGraph/DataGraph";
 import SearchBar from "./Components/SearchBar/SearchBar";
 import YearGraph from "./Components/YearGraph/YearGraph";
+import Header from "./Components/Header/Header";
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <div>
-      <h3>Video Game Data</h3>
+      <Header/>
       <DataGraph videoGames = {videoGames}/>
       <SearchBar videoGames = {videoGames}/>
       <YearGraph videoGames ={videoGames}/>  
